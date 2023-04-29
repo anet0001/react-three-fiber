@@ -1,5 +1,5 @@
-import { Canvas } from "@react-three/fiber";
 import Head from "next/head";
+import BasicScene from "@/components/scenes/BasicScene";
 
 export default function Home() {
   return (
@@ -11,14 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="home-container">
-        <div id="canvas-container">
-          <Canvas style={{ outline: "2px solid red" }}>
-            <mesh>
-              <boxBufferGeometry />
-              <meshPhongMaterial color="teal" />
-            </mesh>
-          </Canvas>
-        </div>
+        <BasicScene />
       </section>
     </>
   );

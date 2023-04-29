@@ -1,0 +1,48 @@
+.basic-scene {
+  @include flex(1rem, column);
+
+  #canvas-container {
+    position: relative;
+    width: min(450px, 100vw - 10rem);
+    height: min(450px, 100vw - 10rem);
+    outline: 2px solid teal;
+    padding: 1.5rem;
+
+    canvas {
+      border: 2px solid teal;
+    }
+
+    &::before {
+      content: "BASIC SCENE";
+      position: absolute;
+      bottom: -0.2rem;
+      left: 50%;
+      translate: -50% -50%;
+      border: 2px solid teal;
+      background-color: white;
+      padding: 0.2rem 0.75rem;
+      z-index: 30;
+      text-transform: uppercase;
+      min-width: 7rem;
+      text-align: center;
+    }
+  }
+
+  .row {
+    @include flex(1rem);
+
+    button {
+      padding: 0.25rem 0.75rem;
+      text-transform: uppercase;
+      min-width: 7rem;
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+
+    .strike-through {
+      text-decoration: line-through;
+    }
+  }
+}

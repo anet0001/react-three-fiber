@@ -6,6 +6,7 @@
 }
 
 @mixin flex(
+  $gap: 0,
   $flex-direction: row,
   $align-items: center,
   $justify-content: center
@@ -14,4 +15,5 @@
   flex-direction: $flex-direction;
   align-items: $align-items;
   justify-content: $justify-content;
+  gap: $gap;
 }
